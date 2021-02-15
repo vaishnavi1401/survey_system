@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+.checked {
+  color: orange;
+}
+</style>
+<body>
+		<div class="container">
+			<div class="card">
+				<div class="card-header"><a data-toggle="collapse" data-target="#ques1">Ques1</a></div>
+				<div class="card-body collapse" id="ques1">
+					<span class="fa fa-thumbs-up" id="star1"></span>
+					<span class="fa fa-thumbs-down" id="star2"></span>
+				</div>
+			</div>
+		</div>
+</body>
+<script>
+	$('#ques1 span').hover(function() {
+		var id = $(this).attr('id');
+		var num = id.substr(-1);
+		$('#star'+num).toggleClass("fa-2x");
+	});
+	
+	$('#ques1 span').click(function() {
+		var id = $(this).attr('id');
+		var num = id.substr(-1);
+		$('#ques1 span').removeClass("checked")
+		$('#star'+num).addClass("checked");
+	});
+</script>
+</html>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>MiniProject</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+ <!-- Login Servlet -->
+ <servlet>
+ 	<servlet-name>Login</servlet-name>
+ 	<servlet-class>com.projectsem5.Login</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>Login</servlet-name>
+ 	<url-pattern>/login</url-pattern>
+ </servlet-mapping>
+ 
+ <!-- Logout Servlet -->
+ <servlet>
+ 	<servlet-name>Logout</servlet-name>
+ 	<servlet-class>com.projectsem5.Logout</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>Logout</servlet-name>
+ 	<url-pattern>/logout</url-pattern>
+ </servlet-mapping>
+ 
+ <!-- Signup Servlet -->
+ <servlet>
+ 	<servlet-name>Signup</servlet-name>
+ 	<servlet-class>com.projectsem5.Signup</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>Signup</servlet-name>
+ 	<url-pattern>/signup</url-pattern>
+ </servlet-mapping>
+ 
+ <!-- Posting a Question Servlet -->
+ <servlet>
+ 	<servlet-name>Question</servlet-name>
+ 	<servlet-class>com.projectsem5.Question</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>Question</servlet-name>
+ 	<url-pattern>/post_question</url-pattern>
+ </servlet-mapping>
+ 
+ <!-- Viewing all Questions Servlet -->
+ <servlet>
+ 	<servlet-name>Questions</servlet-name>
+ 	<servlet-class>com.projectsem5.ViewQuestions</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>Questions</servlet-name>
+ 	<url-pattern>/view_questions</url-pattern>
+ </servlet-mapping>
+ 
+<!-- Editing a Question Servlet -->
+ <servlet>
+ 	<servlet-name>EditQuestions</servlet-name>
+ 	<servlet-class>com.projectsem5.EditQuestion</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>EditQuestions</servlet-name>
+ 	<url-pattern>/edit_question</url-pattern>
+ </servlet-mapping>
+ 
+ <!-- Viewing all Archived Questions Servlet -->
+ <servlet>
+ 	<servlet-name>ArchivedQuestions</servlet-name>
+ 	<servlet-class>com.projectsem5.ViewArchivedQuestions</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>ArchivedQuestions</servlet-name>
+ 	<url-pattern>/view_archived_questions</url-pattern>
+ </servlet-mapping>
+ 
+ <!-- Vote Servlet -->
+ <servlet>
+ 	<servlet-name>Votes</servlet-name>
+ 	<servlet-class>com.projectsem5.Vote</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>Votes</servlet-name>
+ 	<url-pattern>/vote</url-pattern>
+ </servlet-mapping>
+ 
+ <!-- Voted Questions Servlet -->
+ <servlet>
+ 	<servlet-name>Voted</servlet-name>
+ 	<servlet-class>com.projectsem5.Voted</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>Voted</servlet-name>
+ 	<url-pattern>/voted</url-pattern>
+ </servlet-mapping>
+ 
+ 
+</web-app>
